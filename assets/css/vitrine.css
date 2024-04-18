@@ -1,0 +1,321 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+    header{
+        position: fixed;
+        width: 100vw;
+        height: 9vh;
+        z-index: 100;
+    }
+    header ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #181818;
+        letter-spacing: 0.1rem;
+        width: 100vw;
+        height: 9vh;
+    }
+    header li{
+        list-style: none;
+    }
+    header a{
+        color: white;
+        text-decoration: none;
+    }
+    header ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #logo{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    #logo img{
+        width: 3rem;
+        filter: invert(100%);
+    }
+    #nav-esquerda{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #nav-esquerda a{
+        margin-right: 3rem;
+        font-size: 1rem;
+        padding: 32px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        transition: 0.3s;
+    }
+    #caixaBusca::-webkit-input-placeholder{
+    font-size: 0.9rem;
+    }
+    #caixaBusca{
+        width: 16.5rem;
+        height: 2.5rem;
+        margin-left: 20%;
+        background-color: transparent;
+        border: 1px solid #464646;
+    }
+    #caixaBusca::placeholder{
+        text-transform: uppercase;
+        padding-left: 2.9rem;
+    }
+    #lupa{
+        width: 1.8rem;
+        position: absolute;
+        filter: invert(100%);
+        margin-left: 49.5%;
+    }
+    #nav-direita {
+        margin-left: auto;
+        margin-right: 4%;
+    }
+    #nav-direita img{
+        margin-right: 0.6rem;
+        filter: invert(100%);
+    }
+    #nav-direita img:hover{
+     opacity: 0.6;
+     transition: 0.17s;
+    }
+    #bolsa{
+        width: 1.6rem;
+    }
+    #conta{
+        width: 1.8rem;
+    }
+    #coracao{
+        margin-left: -0.5rem;
+        width: 2rem;
+    }
+    #mulheresHr{
+        width: 4.9rem;
+        height: 0.14rem;
+        background-color: rgb(174,148,109);
+        color: transparent;
+        border: transparent;
+        margin-top: 1.9rem;
+        margin-left: -0.15rem;
+        position: absolute;
+        opacity: 0;
+        transition: 0.3s;
+    }
+    #homensHr{
+        width: 4.5rem;
+        height: 0.14rem;
+        background-color: rgb(174,148,109);
+        color: transparent;
+        border: transparent;
+        margin-top: 1.9rem;
+        margin-left: -0.15rem;
+        position: absolute;
+        opacity: 0;
+        transition: 0.3s;
+    }
+    #infantilHr{
+        width: 3.8rem;
+        height: 0.14rem;
+        background-color: rgb(174,148,109);
+        color: transparent;
+        border: transparent;
+        margin-top: 1.9rem;
+        margin-left: -0.15rem;
+        position: absolute;
+        opacity: 0;
+        transition: 0.3s;
+    }
+    #esportesHr{
+        width: 4.9rem;
+        height: 0.14rem;
+        background-color: rgb(174,148,109);
+        color: transparent;
+        border: transparent;
+        margin-top: 1.9rem;
+        margin-left: -0.1rem;
+        position: absolute;
+        opacity: 0;
+        transition: 0.3s;
+    }
+    #colecoesHr{
+        width: 5.3rem;
+        height: 0.14rem;
+        background-color: rgb(174,148,109);
+        color: transparent;
+        border: transparent;
+        margin-top: 1.9rem;
+        margin-left: -0.1rem;
+        position: absolute;
+        opacity: 0;
+        transition: 0.3s;
+    }
+    #outletHr{
+        width: 3.5rem;
+        height: 0.14rem;
+        background-color: rgb(174,148,109);
+        color: transparent;
+        border: transparent;
+        margin-top: 1.9rem;
+        margin-left: -0.1rem;
+        position: absolute;
+        opacity: 0;
+        transition: 0.3s;
+    }
+
+/*------------------------*/
+.removerHeader{
+    width: 100vw;
+    height: 9vh;
+}
+.removerHeader + p a{
+    font-size: 0.8rem;
+}
+.removerHeader + p{
+    margin-top: 1.5%;
+    margin-left: 5%;
+}
+.paper{
+    width: 100vw;
+    height: 15vh;
+    margin-top: 6%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.paper p{
+    font-size: 84%;
+    margin-bottom: 2%;
+    margin-right: 20%;
+    margin-left: 0.4%;
+}
+.paper p span{
+    font-weight: bolder;
+}
+
+.selectOptions{
+    width: 80vw;
+    height: 6vh;
+    margin-left: 10%;
+    margin-top: 0.2%;
+    margin-bottom: 0.2%;
+    display: flex;
+    align-items: center;
+}
+.selectOptionsHr{
+    opacity: 0.2;
+}
+
+
+.containerCor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3vw;
+    height: 4vh;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin-right: 1%;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+.containerTamanho{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5vw;
+    height: 4vh;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin-right: 1%;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+.containerGenero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4vw;
+    height: 4vh;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+    .containerProduto{
+        width: 80vw;
+        height: 60vh;
+        margin-left: 10%;
+        display: inline-flex;
+        margin-bottom: 3%;
+    }
+    .containerItem{
+        width: 25%;
+        height: 100%;
+        border: 1px solid rgba(0, 0, 0, 0.0);
+        padding: 0.5rem;
+    }
+    .containerItem:hover{
+        border: 1px solid rgba(0, 0, 0, 0.3);
+    }
+    .containerItem img{
+    width: 100%;
+    }
+    .containerItem div{
+        width: 100%;
+        margin-top: 1%;
+        height: 30%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .containerItem div aside{
+        width: 100%;
+        height: 31%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2%;
+        margin-top: -4%;
+    }
+    .containerItem div aside a img{
+        width: 100%;
+    }
+    .containerItem div aside a{
+        width: 14%;
+        height: 100%;
+        margin: 0.5%;
+        
+        border: 1px solid rgba(155, 17, 17, 0);
+    }
+    .containerItem div aside a:hover{
+        border: 1px solid rgba(0, 0, 0, 0.3);
+    }
+    .containerNome{
+        color: black;
+        font-size: 1rem;
+    }
+    .containerPreco{
+        font-weight: bolder;
+        margin-top: 4%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+
+
+
+
+footer{
+    margin-top: 5%;
+    width: 100vw;
+    height: 20vh;
+    background-color: beige;
+}
