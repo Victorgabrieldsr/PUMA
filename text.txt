@@ -1,0 +1,90 @@
+const carousel = document.querySelector('#content-carrosel');
+const prevButton = document.querySelector('.carousel-prev');
+const nextButton = document.querySelector('.carousel-next');
+let isTransitioning = false;
+
+function goToNextSlide() {
+  if (isTransitioning) return;
+  isTransitioning = true;
+  
+  const firstCard = carousel.firstElementChild;
+  const cardWidth = firstCard.offsetWidth;
+  
+  carousel.style.transition = 'transform 0.3s ease';
+  carousel.style.transform = `translateX(-${cardWidth}px)`;
+  
+  setTimeout(() => {
+    carousel.appendChild(firstCard);
+    carousel.style.transition = 'none';
+    carousel.style.transform = 'translateX(0)';
+    isTransitioning = false;
+  }, 300);
+}
+
+function goToPrevSlide() {
+  if (isTransitioning) return;
+  isTransitioning = true;
+
+  const lastCard = carousel.lastElementChild;
+  const cardWidth = lastCard.offsetWidth;
+
+  carousel.style.transition = 'none';
+  carousel.style.transform = `translateX(-${cardWidth}px)`;
+  
+  setTimeout(() => {
+    carousel.insertBefore(lastCard, carousel.firstElementChild);
+    carousel.style.transition = 'transform 0.3s ease';
+    carousel.style.transform = 'translateX(0)';
+    isTransitioning = false;
+  }, 10);
+}
+
+prevButton.addEventListener('click', goToPrevSlide);
+nextButton.addEventListener('click', goToNextSlide);
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+const carousel = document.querySelector('#content-carrosel');
+const prevButton = document.querySelector('.carousel-prev');
+const nextButton = document.querySelector('.carousel-next');
+
+function goToNextSlide() {
+  const firstCard = carousel.firstElementChild;
+  const cardWidth = firstCard.offsetWidth;
+  carousel.style.transition = '0.3s'; // Ativando a transição
+  carousel.style.transform = `translateX(-${cardWidth}px)`; // Movendo o carrossel para a esquerda
+  setTimeout(() => {
+    carousel.appendChild(firstCard);
+    carousel.style.transition = 'none'; // Removendo temporariamente a transição após a mudança
+    carousel.style.transform = 'translateX(0)'; // Reposicionando o carrossel
+  }, 300);
+}
+
+function goToPrevSlide() {
+  const lastCard = carousel.lastElementChild;
+  const cardWidth = lastCard.offsetWidth;
+  carousel.style.transition = 'none'; // Removendo temporariamente a transição
+  carousel.style.transform = `translateX(-${cardWidth}px)`; // Movendo o carrossel para a esquerda
+  setTimeout(() => {
+    carousel.insertBefore(lastCard, carousel.firstElementChild);
+    carousel.style.transition = '0.3s'; // Restaurando a transição
+    carousel.style.transform = 'translateX(0)'; // Reposicionando o carrossel
+  }, 10);
+}
+
+prevButton.addEventListener('click', () => {
+  goToPrevSlide();
+});
+
+nextButton.addEventListener('click', () => {
+  goToNextSlide();
+});
