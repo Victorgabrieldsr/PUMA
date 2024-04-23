@@ -1,3 +1,4 @@
+/// Loop para escrever automatico na caixa da nav-bar
 let verificarIniciarContador = true;
 function iniciarContador() {
     let caixaBusca = document.querySelector('.caixaBusca');
@@ -55,6 +56,7 @@ window.onload = function () {
     iniciarContador();
 };
 
+/// Remove os textos e icons da nav-bar para o icon sandwich
 const menuNav = document.querySelectorAll('nav ul li');
 menuNav.forEach(item => {
     item.addEventListener('mouseover', () => {
