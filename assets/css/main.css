@@ -108,8 +108,8 @@ body {
         display: flex;
     }
 
-    .carousel-prev ion-icon,
-    .carousel-next ion-icon {
+    .carrosel-prev ion-icon,
+    .carrosel-next ion-icon {
         font-size: 1.5rem;
         /* Reduzindo o tamanho para telas menores */
     }
@@ -168,14 +168,14 @@ body {
     max-width: 250px;
 }
 
-.carousel-prev ion-icon,
-.carousel-next ion-icon {
+.carrosel-prev ion-icon,
+.carrosel-next ion-icon {
     cursor: pointer;
     font-size: 3rem;
     opacity: 0.4;
 }
 
-.carousel-prev {
+.carrosel-prev {
     transform: translateY(-50%);
     background: transparent;
     position: absolute;
@@ -184,7 +184,7 @@ body {
     left: 2rem;
 }
 
-.carousel-next {
+.carrosel-next {
     transform: translateY(-50%);
     background: transparent;
     position: absolute;
