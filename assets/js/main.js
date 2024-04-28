@@ -10,12 +10,12 @@ const prevButton2 = document.querySelector('#carrosel-prev2');
 let isTransitioning = false;
 
 class goToNextSlide {
-  Slide(x) {
+  Slide(x, y) {
     if (isTransitioning) return;
     isTransitioning = true;
 
     let cardWidth = x.firstElementChild.offsetWidth;
-    cardWidth = cardWidth + 16;
+    cardWidth = cardWidth + y;
     // Clonar o primeiro slide e adicioná-lo ao final
     const clonedSlide = x.firstElementChild.cloneNode(true);
     x.appendChild(clonedSlide);
@@ -36,12 +36,12 @@ class goToNextSlide {
   }
 }
 class goToPrevSlide {
-  Slide(x) {
+  Slide(x, y) {
     if (isTransitioning) return;
     isTransitioning = true;
 
     let cardWidth = x.firstElementChild.offsetWidth;
-    cardWidth = cardWidth + 16;
+    cardWidth = cardWidth + y;
     x.style.transition = 'none';
     x.style.transform = `translateX(-${cardWidth}px)`;
     x.insertBefore(x.lastElementChild, x.firstElementChild);
@@ -62,12 +62,11 @@ class goToPrevSlide {
 const next_slide = new goToNextSlide();
 const prev_slide = new goToPrevSlide();
 
+nextButton1.addEventListener('click', () => next_slide.Slide(carousel1, 16));
+prevButton1.addEventListener('click', () => prev_slide.Slide(carousel1, 16));
 
-nextButton1.addEventListener('click', () => next_slide.Slide(carousel1));
-prevButton1.addEventListener('click', () => prev_slide.Slide(carousel1));
-
-nextButton2.addEventListener('click', () => next_slide.Slide(carousel2));
-prevButton2.addEventListener('click', () => prev_slide.Slide(carousel2));
+nextButton2.addEventListener('click', () => next_slide.Slide(carousel2, 16));
+prevButton2.addEventListener('click', () => prev_slide.Slide(carousel2, 16));
 
 
 ///Transição de opacidade nos botoes do Carrosel
@@ -77,4 +76,24 @@ for (let i = 0; i < buttonsCarrosel.length; i++) {
     this.style.transition = "0.3s";
   });
 }
+
+let track_prev = document.querySelector(".track-prev");
+let track_next = document.querySelector(".track-next");
+const track_banner = document.querySelector(".track-banner");
+
+// document.querySelector(".track-banner").addEventListener("mouseover", function () {
+//   track_next.style.opacity = "1";
+//   track_prev.style.opacity = "1";
+//   track_next.style.transition = "0.4s";
+//   track_prev.style.transition = "0.4s";
+// });
+// document.querySelector(".track-banner").addEventListener("mouseout", function () {
+//   track_next.style.opacity = "0";
+//   track_prev.style.opacity = "0";
+//   track_next.style.transition = "0.4s";
+//   track_prev.style.transition = "0.4s";
+// });
+
+track_prev.addEventListener('click', () => prev_slide.Slide(track_banner, 8));
+track_next.addEventListener('click', () => next_slide.Slide(track_banner, 8));
 

@@ -9,6 +9,7 @@ body {
     overflow-x: hidden;
 }
 
+/* BANNER */
 .banner img {
     width: 100%;
 }
@@ -26,68 +27,89 @@ body {
     margin-bottom: 3rem;
 }
 
+/* BANNER */
 
+/* 7 - BANNERS */
 
-.multi-banner-desktop {
+.track-banner {
     display: flex;
-    background-color: black;
+    position: relative;
+    left: -15%;
+    margin-top: -1rem;
 }
 
-.multi-banner-quadrado-desktop a img {
+.card-track {
+    position: relative;
+    flex: 0 0 calc(26%);
+}
+
+.card-track a {
+    color: black;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.card-track img {
     width: 100%;
+    height: auto;
 }
 
-.multi-banner-quadrado-desktop a img:hover {
-    opacity: 0.7;
-    transition: 0.3s;
+.card-track:not(:last-child) {
+    margin-right: 0.5rem;
 }
 
-.multi-banner-mobile {
-    display: none;
+.card-track-texto {
+    position: relative;
 }
 
-.multi-banner-quadrado-mobile a img {
-    width: 99%;
-}
-
-/* .multi-banner-texto {
-    width: 100vw;
-    height: 15vh;
+.card-track-texto {
     display: flex;
-}
-
-.multi-banner-texto-quadrado {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    width: 25%;
-    height: 110%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
 }
 
-.multi-banner-texto-quadrado a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.card-track-texto a {
+    background-color: black;
+    font-weight: bolder;
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.7rem;
-    font-weight: 600;
-    background-color: rgb(0, 0, 0);
-    width: 40%;
-    height: 30%;
+    padding: 0.8rem 3.5rem;
+    font-size: 0.9rem;
+    margin-top: 1rem;
 }
 
-.multi-banner-texto-quadrado h2 {
-    margin-bottom: 4%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}  */
+.track-prev ion-icon,
+.track-next ion-icon {
+    cursor: pointer;
+    font-size: 3rem;
+    opacity: 1;
+    background-color: white;
+    border-radius: 2rem;
+    padding: 0.5rem;
+}
 
+.track-prev {
+    background: transparent;
+    position: absolute;
+    border: none;
+    margin-top: -22rem;
+    left: 3rem;
+    opacity: 1;
+}
 
+.track-next {
+    background: transparent;
+    position: absolute;
+    border: none;
+    margin-top: -22rem;
+    right: 3rem;
+    opacity: 1;
+}
 
+/* 7 - BANNERS */
 
+/* CARROSEL */
 .carousel-size {
     position: relative;
     margin: 0 auto;
@@ -168,7 +190,13 @@ ion-icon:hover {
     opacity: 1;
 }
 
-@media screen and (max-width: 1280px) { /* Notebook */
+/* CARROSEL */
+
+
+
+@media screen and (max-width: 1280px) {
+
+    /* Notebook */
     .carousel-container {
         width: 95%;
     }
@@ -182,7 +210,8 @@ ion-icon:hover {
     }
 }
 
-@media screen and (max-width: 840px) { /* Tablet */
+@media screen and (max-width: 840px) {
+    /* Tablet */
 
     .banner-mobile {
         display: block;
@@ -209,19 +238,25 @@ ion-icon:hover {
     .carrosel-next ion-icon {
         font-size: 3rem;
     }
-    .carrosel-prev{
+
+    .carrosel-prev {
         left: -3rem;
     }
-    .carrosel-next{
+
+    .carrosel-next {
         right: -3rem;
     }
+
     .carousel-container {
         width: 100%;
     }
 
 }
-@media screen and (max-width: 430px){ /* Smartphone */
-    .carousel-container{
+
+@media screen and (max-width: 430px) {
+
+    /* Smartphone */
+    .carousel-container {
         width: 90%;
     }
 }
@@ -229,8 +264,8 @@ ion-icon:hover {
 
 
 
-/* footer{
-    margin-top: 15%;
+footer {
+    margin-top: 25%;
     padding: 2rem;
     background-color: bisque;
-} */
+}

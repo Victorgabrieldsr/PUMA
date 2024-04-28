@@ -1,0 +1,37 @@
+
+/* 4 - BANNER */
+.multi-banner-desktop {
+    display: flex;
+    background-color: transparent;
+}
+
+.multi-banner-quadrado-desktop a img {
+    width: 100%;
+}
+
+.multi-banner-quadrado-desktop a img:hover {
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.multi-banner-mobile {
+    display: none;
+}
+
+.multi-banner-quadrado-mobile a img {
+    width: 99%;
+}
+
+.texto-multi-banner-desktop {
+    display: flex;
+    justify-content: space-between;
+}
+
+.texto-multi-banner-quadrado-desktop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    width: 25%;
+}
+/* 4 - BANNER */
