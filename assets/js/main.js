@@ -1,12 +1,16 @@
 /// Colocar Transição e Deixar o Carrosel Movel! 
 const carousel1 = document.querySelector('#content-carrosel1');
 const carousel2 = document.querySelector('#content-carrosel2');
+const carousel3 = document.querySelector('#content-carrosel3');
 
 const nextButton1 = document.querySelector('#carrosel-next1');
 const prevButton1 = document.querySelector('#carrosel-prev1');
 
 const nextButton2 = document.querySelector('#carrosel-next2');
 const prevButton2 = document.querySelector('#carrosel-prev2');
+
+const nextButton3 = document.querySelector('#carrosel-next3');
+const prevButton3 = document.querySelector('#carrosel-prev3');
 let isTransitioning = false;
 
 class goToNextSlide {
@@ -67,6 +71,9 @@ prevButton1.addEventListener('click', () => prev_slide.Slide(carousel1, 16));
 
 nextButton2.addEventListener('click', () => next_slide.Slide(carousel2, 16));
 prevButton2.addEventListener('click', () => prev_slide.Slide(carousel2, 16));
+
+nextButton3.addEventListener('click', () => next_slide.Slide(carousel3, 16));
+prevButton3.addEventListener('click', () => prev_slide.Slide(carousel3, 16));
 
 
 ///Transição de opacidade nos botoes do Carrosel

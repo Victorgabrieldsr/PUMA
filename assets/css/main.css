@@ -31,6 +31,9 @@ body {
 
 /* 7 - BANNERS */
 
+.article-track{
+    margin-bottom: 5rem;
+}
 .track-banner {
     display: flex;
     position: relative;
