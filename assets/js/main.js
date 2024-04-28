@@ -84,23 +84,26 @@ for (let i = 0; i < buttonsCarrosel.length; i++) {
   });
 }
 
+
 let track_prev = document.querySelector(".track-prev");
 let track_next = document.querySelector(".track-next");
+
+///Chamando a track-banner e aplicando a class de passar os cards, o numero (8) é quantos px!
 const track_banner = document.querySelector(".track-banner");
-
-// document.querySelector(".track-banner").addEventListener("mouseover", function () {
-//   track_next.style.opacity = "1";
-//   track_prev.style.opacity = "1";
-//   track_next.style.transition = "0.4s";
-//   track_prev.style.transition = "0.4s";
-// });
-// document.querySelector(".track-banner").addEventListener("mouseout", function () {
-//   track_next.style.opacity = "0";
-//   track_prev.style.opacity = "0";
-//   track_next.style.transition = "0.4s";
-//   track_prev.style.transition = "0.4s";
-// });
-
 track_prev.addEventListener('click', () => prev_slide.Slide(track_banner, 8));
 track_next.addEventListener('click', () => next_slide.Slide(track_banner, 8));
+
+///Tranisção e opacidade nos botoes do 7 BANNERS 
+document.querySelector(".article-track").addEventListener("mouseover", function () {
+  track_next.style.opacity = "1";
+  track_prev.style.opacity = "1";
+  track_next.style.transition = "0.4s";
+  track_prev.style.transition = "0.4s";
+});
+document.querySelector(".article-track").addEventListener("mouseout", function () {
+  track_next.style.opacity = "0";
+  track_prev.style.opacity = "0";
+  track_next.style.transition = "0.4s";
+  track_prev.style.transition = "0.4s";
+});
 

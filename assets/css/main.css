@@ -31,9 +31,10 @@ body {
 
 /* 7 - BANNERS */
 
-.article-track{
+.article-track {
     margin-bottom: 5rem;
 }
+
 .track-banner {
     display: flex;
     position: relative;
@@ -86,7 +87,6 @@ body {
 .track-next ion-icon {
     cursor: pointer;
     font-size: 3rem;
-    opacity: 1;
     background-color: white;
     border-radius: 2rem;
     padding: 0.5rem;
@@ -97,8 +97,8 @@ body {
     position: absolute;
     border: none;
     margin-top: -22rem;
-    left: 3rem;
-    opacity: 1;
+    left: 4rem;
+    opacity: 0;
 }
 
 .track-next {
@@ -107,7 +107,7 @@ body {
     border: none;
     margin-top: -22rem;
     right: 3rem;
-    opacity: 1;
+    opacity: 0;
 }
 
 /* 7 - BANNERS */
@@ -143,6 +143,10 @@ body {
     color: black;
     cursor: pointer;
     font-size: 0.95rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .card img {
@@ -150,8 +154,19 @@ body {
     width: 100%;
 }
 
-.card hr {
-    border-color: blueviolet;
+#content-carrosel1 .card hr {
+    padding: 0 50%;
+    border: 1px solid blueviolet;
+}
+
+#content-carrosel2 .card hr {
+    padding: 0 50%;
+    border: 1px solid black;
+}
+
+#content-carrosel3 .card hr {
+    padding: 0 50%;
+    border: 1px solid orange;
 }
 
 .card span {
@@ -265,10 +280,29 @@ ion-icon:hover {
 }
 
 
-
+.arrow-up{
+    border: none;
+    background-color: white;
+    position: fixed;
+    z-index: 200;
+    padding: 0.8rem;    
+    right: 2rem;
+    bottom: 2rem;
+    box-shadow: 0rem 0rem 1rem #e6e6e6;
+}
+.arrow-up:hover{
+    cursor: pointer;
+}
+.arrow-up img{
+    width: 3rem;
+}
+.arrow-up:hover img{
+    transition: 0.5s;
+    filter: invert(20%) sepia(100%) saturate(10000%);
+}
 
 footer {
-    margin-top: 25%;
-    padding: 2rem;
-    background-color: bisque;
+    margin-top: 5rem;
+    padding: 25rem;
+    background-color: #181818;
 }
