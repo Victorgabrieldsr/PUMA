@@ -301,8 +301,3 @@ ion-icon:hover {
     filter: invert(20%) sepia(100%) saturate(10000%);
 }
 
-footer {
-    margin-top: 5rem;
-    padding: 25rem;
-    background-color: #181818;
-}
