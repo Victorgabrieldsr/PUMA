@@ -1,127 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <link rel="stylesheet" href="vitrine.css">
+    <link rel="stylesheet" href="../../css/vitrine.css">
+    <link rel="stylesheet" href="../../css/header.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <header>
-        <nav>
-            <ul>
-                <li id="logo">
-                    <a href="../index.html"><img src="../Pastas/img/logo.png" alt=""></a>
-                </li>
-                <li id="nav-esquerda">
-                    <a href="vitrine.html" id="mulheres">Mulheres <hr id="mulheresHr"></a>
-                    <a href="vitrine.html" id="homens">Homens <hr id="homensHr"></a>
-                    <a href="vitrine.html" id="infantil">Infantil <hr id="infantilHr"></a>
-                    <a href="vitrine.html" id="esportes">Esportes <hr id="esportesHr"></a>
-                    <a href="vitrine.html" id="colecoes">Coleções <hr id="colecoesHr"></a>
-                    <a href="vitrine.html" id="outlet">Outlet <hr id="outletHr"></a>
-                </li>
-                <img id="lupa" src="../Pastas/img/lupa.png" alt="">
-                <input type="search" name="caixaBusca" id="caixaBusca">
-                
-                <li id="nav-direita">
-                    <a href=""><img id="coracao" src="../Pastas/img/coracao.png" alt=""></a>
-                    <a href=""><img id="bolsa" src="../pastas/img/bolsa.png" alt=""></a>
-                    <a href=""><img id="conta" src="../pastas/img/conta.png" alt=""></a>
-                </li>
-            </ul>
+        <nav class="nav-bar">
+            <div class="logo">
+                <a href="../../../index.html"><img src="../../imgs/icons/logo.png" alt=""></a>
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li><a href="vitrine.html">Mulheres</a></li>
+                    <li><a href="vitrine.html">Homens</a></li>
+                    <li><a href="vitrine.html">Infantil</a></li>
+                    <li><a href="vitrine.html">Esportes</a></li>
+                    <li><a href="vitrine.html">Coleções</a></li>
+                    <li><a href="vitrine.html">Outlet</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-pesquisa">
+                <img class="lupa" src="../../imgs/icons/lupa.png" alt="">
+                <input type="search" name="caixaBusca" class="caixaBusca">
+            </div>
+            <div class="nav-icons">
+                <a href=""><img class="coracao" src="../../imgs/icons/coracao.png" alt=""></a>
+                <a href=""><img class="bolsa" src="../../imgs/icons/bolsa.png" alt=""></a>
+                <a href=""><img class="conta" src="../../imgs/icons/conta.png" alt=""></a>
+            </div>
+
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="../../assets/imgs/svg/menu.svg"></button>
+            </div>
         </nav>
+        <div class="mobile-menu">
+            <ul>
+                <li><a href="vitrine.html">Mulheres</a> </li>
+                <li><a href="vitrine.html">Homens</a></li>
+                <li><a href="vitrine.html">Infantil</a></li>
+                <li><a href="vitrine.html">Esportes</a></li>
+                <li><a href="vitrine.html">Coleções</a></li>
+                <li><a href="vitrine.html">Outlet</a></li>
+            </ul>
+            <div class="mobile-icons">
+                <img class="coracao" src="../../imgs/icons/coracao.png" alt="">
+                <img class="bolsa" src="../../imgs/cons/bolsa.png" alt="">
+                <img class="conta" src="../../imgs/icons/conta.png" alt="">
+            </div>
+        </div>
     </header>
     <main>
 
-        <div class="removerHeader"></div>
-        <p><a href="../index.html">Início</a> > <a href="vitrine.html">Homens</a></p>
-        <div class="paper">
-        <p>Transforme o seu dia a dia com a Linha PUMA Masculina. Uma grande variedade de produtos que irão levar muito mais estilo e conforto ao seu visual. Itens casuais como moletons, calças, shorts ao lado de tênis masculinos, camisetas e o melhor da tecnologia PUMA estão disponíveis em diversos modelos e cores. <span>Peças desenvolvidas para aliar versatilidade e performance</span>. Confira os produtos disponíveis em nossa página, renove os seus looks e se prepare para ir além dos seus limites.</p>
 
-        <h1>LINHA PUMA MASCULINA</h1>
-    </div>  
-    <hr class="selectOptionsHr">
-      <article class="selectOptions">
-            <div class="containerCor">
-                <p>Cor</p>
-            </div>
-            <div class="containerTamanho">
-                <p>Tamanho</p>
-            </div>
-            <div class="containerGenero">
-                <p>Gênero</p>
-            </div>
-        </article>  
-    <hr class="selectOptionsHr">
-        <br><br>
-        <article class="containerProduto">
-            <article class="containerItem">
-                <a href=""><img src="../Pastas/Produtos/Tenis/Tenis rs-x mix/Tenis rs-x mix colorido/Tenis rs-x mix colorido1.1.avif" alt=""></a>
-                <div>
-                    <aside> 
-                        <a href=""><img src="../Pastas/Produtos/Chuteiras/Chuteira preta/chuteira1.avif" alt=""></a> 
-                        <a href=""><img src="../Pastas/Produtos/Chuteiras/Chuteira preta/chuteira1.avif" alt=""></a> 
-                    </aside>
-
-                    <a href="" class="containerNome">Tênis RS-X Mix</a>
-
-                    <label class="containerPreco">R$599,90</label>
-
-                </div>
-            </article>
-          
-            <article class="containerItem">
-                <a href=""><img src="../Pastas/Produtos/Tenis/Tenis rs-x mix/Tenis rs-x mix colorido/Tenis rs-x mix colorido1.1.avif" alt=""></a>
-                <div>
-                    <aside> 
-                        <a href=""><img src="../Pastas/Produtos/Chuteiras/Chuteira preta/chuteira1.avif" alt=""></a> 
-                        <a href=""><img src="../Pastas/Produtos/Chuteiras/Chuteira preta/chuteira1.avif" alt=""></a> 
-                    </aside>
-
-                    <a href="" class="containerNome">Tênis RS-X Mix</a>
-
-                    <label class="containerPreco">R$599,90</label>
-
-                </div>
-            </article>
-          
-            <article class="containerItem">
-                <a href=""><img src="../Pastas/Produtos/Tenis/Tenis rs-x mix/Tenis rs-x mix colorido/Tenis rs-x mix colorido1.1.avif" alt=""></a>
-                <div>
-                    <aside> 
-                        <a href=""><img src="../Pastas/Produtos/Chuteiras/Chuteira preta/chuteira1.avif" alt=""></a> 
-                        <a href=""><img src="../Pastas/Produtos/Chuteiras/Chuteira preta/chuteira1.avif" alt=""></a> 
-                    </aside>
-
-                    <a href="" class="containerNome">Tênis RS-X Mix</a>
-
-                    <label class="containerPreco">R$599,90</label>
-
-                </div>
-            </article>
-          
-            <article class="containerItem">
-                <a href=""><img src="../Pastas/Produtos/Tenis/Tenis rs-x mix/Tenis rs-x mix colorido/Tenis rs-x mix colorido1.1.avif" alt=""></a>
-                <div>
-                    <aside> 
-                        <a href=""><img src="../Pastas/Produtos/Chuteiras/Chuteira preta/chuteira1.avif" alt=""></a> 
-                        <a href=""><img src="../Pastas/Produtos/Chuteiras/Chuteira preta/chuteira1.avif" alt=""></a> 
-                    </aside>
-
-                    <a href="" class="containerNome">Tênis RS-X Mix</a>
-
-                    <label class="containerPreco">R$599,90</label>
-
-                </div>
-            </article>
-          
-        </article>
 
     </main>
     <footer>
-    
+        <div class="footer-top">
+            <div class="footer-puma">
+                <a href=""><img src="assets/imgs/icons/logo.png" alt=""></a>
+            </div>
+            <div class="footer-nav">
+                <div class="footer-nav-div">
+                    <label>Suporte</label>
+                    <hr>
+                    <div>
+                        <nav>
+                            <ol>
+                                <li><a href="">Atendimento ao Cliente</a></li>
+                                <li><a href="">Formas de Pagamento</a></li>
+                                <li><a href="">Perguntas Frequentes</a></li>
+                                <li><a href="">Política de Entregas</a></li>
+                                <li><a href="">Política de Privacidade</a></li>
+                                <li><a href="">Termos e Condições de Uso</a></li>
+                            </ol>
+                        </nav>
+                        <nav>
+                            <ol>
+                                <li><a href="">Trocas e Devoluções</a></li>
+                                <li><a href="">Localiazdor de Lojas</a></li>
+                                <li><a href="">Sobre Reabertura de Lojas</a></li>
+                                <li><a href="">Promoções</a></li>
+                                <li><a href="">Mapa do Site</a></li>
+                                <li><a href="">Programa de Afiliados</a></li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+                <div class="footer-nav-div">
+                    <label>Sobre a Puma</label>
+                    <hr>
+                    <div>
+                        <nav>
+                            <ol>
+                                <li><a href="">Carreias</a></li>
+                                <li><a href="">A PUMA</a></li>
+                                <li><a href="">Notícias Corporativas</a></li>
+                            </ol>
+                        </nav>
+                        <nav>
+                            <ol>
+                                <li><a href="">Imprensa</a></li>
+                                <li><a href="">Guia de Medidas</a></li>
+                                <li><a href="">Transparência</a></li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+                <div class="footer-nav-div">
+                    <label>Redes Sociais</label>
+                    <hr>
+                    <div class="footer-nav-div-redes">
+                        <a href=""><img src="assets/imgs/svg/Rede-social/facebook.svg" alt=""></a>
+                        <a href=""><img src="assets/imgs/svg/Rede-social/twiter.svg" alt=""></a>
+                        <a href=""><img src="assets/imgs/svg/Rede-social/instagram.svg" alt=""></a>
+                        <a href=""><img src="assets/imgs/svg/Rede-social/youtube.svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <hr>
+        <div class="footer-container">
+            <div>
+                <label>PUMA SPORTS LTDA CNPJ 05.406.034/0028-14 Inscrição Estadual 298.424.250.116 Endereço: Rua Pasadena 104, Sala 106, Cond San Jose, Bairro Bosque Capuava, Embu das Artes - SP CEP: 06846-095</label>
+                <label> Atendimento ao Cliente: sac.brasil@br.puma.com | (11) 3003-4598 | Segundas às Sextas, das 8h às 18h</label>
+            </div>
+        </div>
     </footer>
-    <script src="vitrine.js"></script>
+    <script src="../../js/header.js"></script>
 </body>
+
 </html>

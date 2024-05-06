@@ -78,3 +78,24 @@ function menuShow() {
         document.querySelector('.icon').src = './assets/imgs/svg/close.svg';
     }
 }
+
+// Quando o usuário rolar 20px a partir do topo da página, mostrar o botão
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("button-arrow-up").style.display = "block";
+  } else {
+    document.getElementById("button-arrow-up").style.display = "none";
+  }
+}
+
+// Quando o usuário clicar no botão, rolar suavemente para o topo da página
+function topFunction() {
+    var currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
+    if (currentPosition > 0) {
+      window.requestAnimationFrame(topFunction);
+      console.log(currentPosition);
+      window.scrollTo(0, currentPosition - currentPosition / 12);
+    }
+}
