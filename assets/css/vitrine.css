@@ -1,0 +1,47 @@
+.text-article{
+    margin-top: 5rem;
+}
+.text-article p,h1{
+    margin: 0 10rem 0 10rem;
+}
+.text-article p{
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+.text-article h1{
+    font-size: 1.8rem;
+}
+.text-article-horizontal{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+.text-article-horizontal p{
+    font-size: 1.7rem;
+}
+.filter{
+    margin-top: 2rem;
+}
+.filter hr{
+    opacity: 0.4;
+}
+.filter-horizontal{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0.8rem 12rem 0.8rem 12rem;
+}
+.filter-horizontal img{
+    height: 2rem;
+    margin-right: 1rem;
+}
+.filter-horizontal button{
+    text-align: center;
+    padding: 0.5rem 1.2rem 0.5rem 1.2rem;
+    margin-right: 0.5rem;
+    border: 1px solid rgb(0, 0, 0, 0.2);
+    font-size: 1rem;
+    font-weight: bold;
+    background: transparent;
+}
