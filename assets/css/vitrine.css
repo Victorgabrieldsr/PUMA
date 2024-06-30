@@ -1,44 +1,53 @@
-.text-article{
+.text-article {
     margin-top: 5rem;
 }
-.text-article p,h1{
+
+.text-article p,
+h1 {
     margin: 0 10rem 0 10rem;
 }
-.text-article p{
+
+.text-article p {
     margin-top: 0.5rem;
     font-size: 0.9rem;
 }
-.text-article h1{
+
+.text-article h1 {
     font-size: 1.8rem;
 }
-.text-article-horizontal{
+
+.text-article-horizontal {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 2rem;
 }
-.text-article-horizontal p{
+
+.text-article-horizontal p {
     font-size: 1.7rem;
 }
-.filter{
+
+.filter {
     margin-top: 2rem;
-    background-color: aqua;
 }
-.filter hr{
+
+.filter hr {
     opacity: 0.4;
 }
-.filter-horizontal{
+
+.filter-horizontal {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin: 0.8rem 12rem 0.8rem 12rem;
-    background-color: rebeccapurple;
 }
-.filter-horizontal img{
+
+.filter-horizontal img {
     height: 2rem;
     margin-right: 1rem;
 }
-.filter-horizontal button{
+
+.filter-horizontal button {
     text-align: center;
     padding: 0.5rem 1.2rem 0.5rem 1.2rem;
     margin-right: 0.5rem;
@@ -46,4 +55,43 @@
     font-size: 1rem;
     font-weight: bold;
     background: transparent;
+}
+
+.produtos-horizontal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 10rem 0rem 10rem;
+}
+.produtos-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px rgb(0, 0, 0, 0);
+    margin:  0 0 -1rem 0;
+    
+}
+.produtos-card:hover{
+    border: solid 1px rgb(0, 0, 0, 0.3);
+}
+.produtos-card a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: black;
+    margin: 0.5rem 0.5rem 0 0.5rem;
+    width: 100%;
+}
+.produtos-card a label{
+    margin: 1rem 0 0 0;
+}
+.produtos-card img{
+    width: auto;
+}
+.produtos-card a h4{
+    margin: 1rem 0 1rem 0;
+}
+.produtos-card a h4 span{
+    display: inline;
 }

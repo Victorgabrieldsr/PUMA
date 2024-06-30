@@ -163,8 +163,14 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    margin-top: 0.5rem;
+    margin: 1rem 0 0 0;
     max-width: 250px;
+}
+.card h4{
+    margin: 1rem 0 0 0;
+}
+.card h4 span{
+    display: inline;
 }
 
 .carrosel-prev ion-icon,
