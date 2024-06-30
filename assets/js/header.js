@@ -83,11 +83,17 @@ function menuShow() {
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById("button-arrow-up").style.display = "block";
-  } else {
-    document.getElementById("button-arrow-up").style.display = "none";
-  }
+    var elements = document.getElementsByClassName("button-arrow-up");
+    if (elements.length > 0) {  // Check if there are any elements with the class name
+        var element = elements[0];  // Get the first element from the collection
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            element.style.display = "block";
+        } else {
+            element.style.display = "none";
+        }
+    } else {
+        console.error("No elements found with class name 'button-arrow-up'");
+    }
 }
 
 // Quando o usuário clicar no botão, rolar suavemente para o topo da página

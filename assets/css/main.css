@@ -268,27 +268,3 @@ ion-icon:hover {
     }
 }
 
-.arrow-up {
-    border: none;
-    background-color: white;
-    position: fixed;
-    z-index: 200;
-    padding: 0.8rem;
-    right: 2rem;
-    bottom: 2rem;
-    box-shadow: 0rem 0rem 1rem #e6e6e6;
-    display: none;
-}
-
-.arrow-up:hover {
-    cursor: pointer;
-}
-
-.arrow-up img {
-    width: 3rem;
-}
-
-.arrow-up:hover img {
-    transition: 0.5s;
-    filter: invert(20%) sepia(100%) saturate(10000%);
-}
