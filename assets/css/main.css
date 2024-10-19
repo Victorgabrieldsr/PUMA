@@ -22,6 +22,8 @@
 
 .article-track {
     margin-bottom: 5rem;
+    overflow: hidden;
+    padding: 1rem;
 }
 
 .track-banner {
@@ -34,6 +36,7 @@
 .card-track {
     position: relative;
     flex: 0 0 calc(26%);
+    text-align: center;
 }
 
 .card-track a {
@@ -49,10 +52,6 @@
 
 .card-track:not(:last-child) {
     margin-right: 0.5rem;
-}
-
-.card-track-texto {
-    position: relative;
 }
 
 .card-track-texto {
@@ -81,22 +80,26 @@
     padding: 0.5rem;
 }
 
-.track-prev {
+.track-prev, .track-next {
     background: transparent;
     position: absolute;
     border: none;
     margin-top: -22rem;
-    left: 4rem;
     opacity: 0;
+    transition: 0.4s ease;
+}
+
+.track-prev {
+    left: 4rem;
 }
 
 .track-next {
-    background: transparent;
-    position: absolute;
-    border: none;
-    margin-top: -22rem;
     right: 3rem;
-    opacity: 0;
+}
+
+.article-track:hover .track-prev,
+.article-track:hover .track-next {
+    opacity: 1;
 }
 
 /* 7 - BANNERS */
@@ -225,7 +228,7 @@ ion-icon:hover {
 
 @media screen and (max-width: 840px) {
     /* Tablet */
-
+    
     .banner-mobile {
         display: block;
     }
@@ -251,7 +254,7 @@ ion-icon:hover {
     .carrosel-next ion-icon {
         font-size: 3rem;
     }
-
+    
     .carrosel-prev {
         left: -3rem;
     }
@@ -263,7 +266,35 @@ ion-icon:hover {
     .carousel-container {
         width: 100%;
     }
+    
+    .card-track {
+        flex: 0 0 calc(80%); 
+        margin-bottom: 2rem;
+    }
+    
+    .card-track:not(:last-child) {
+        margin-right: 1rem;
+    }
 
+    .card-track img {
+        width: 100%;
+    }
+
+    .track-prev, .track-next {
+        opacity: 1;
+    }
+
+    .track-prev{
+        left: 0.5rem;
+    }
+
+    .track-next{
+        right: 0.5rem;
+    }
+
+    .track-banner {
+        left: -75%;
+    }
 }
 
 @media screen and (max-width: 430px) {

@@ -51,7 +51,7 @@ class goToPrevSlide {
     x.insertBefore(x.lastElementChild, x.firstElementChild);
 
     setTimeout(() => {
-      x.style.transition = 'transform 0.5s';
+      x.style.transition = 'transform 0.5s ease';
       x.style.transform = 'translateX(0)';
     }, 10);
 
@@ -88,22 +88,46 @@ for (let i = 0; i < buttonsCarrosel.length; i++) {
 let track_prev = document.querySelector(".track-prev");
 let track_next = document.querySelector(".track-next");
 
-///Chamando a track-banner e aplicando a class de passar os cards, o numero (8) é quantos px!
-const track_banner = document.querySelector(".track-banner");
-track_prev.addEventListener('click', () => prev_slide.Slide(track_banner, 8));
-track_next.addEventListener('click', () => next_slide.Slide(track_banner, 8));
 
-///Tranisção e opacidade nos botoes do 7 BANNERS 
-document.querySelector(".article-track").addEventListener("mouseover", function () {
-  track_next.style.opacity = "1";
-  track_prev.style.opacity = "1";
-  track_next.style.transition = "0.4s";
-  track_prev.style.transition = "0.4s";
-});
-document.querySelector(".article-track").addEventListener("mouseout", function () {
-  track_next.style.opacity = "0";
-  track_prev.style.opacity = "0";
-  track_next.style.transition = "0.4s";
-  track_prev.style.transition = "0.4s";
+
+
+
+///Chamando a track-banner e aplicando a class de passar os cards, o numero (8) é quantos px!
+// const track_banner = document.querySelector(".track-banner");
+// track_prev.addEventListener('click', () => prev_slide.Slide(track_banner, 8));
+// track_next.addEventListener('click', () => next_slide.Slide(track_banner, 8));
+
+// Função para adicionar eventos de clique com base no tamanho da tela
+function setupSlideControls() {
+  const track_banner = document.querySelector(".track-banner");
+  const track_prev = document.querySelector(".track-prev");
+  const track_next = document.querySelector(".track-next");
+
+  // Verifica o tamanho da tela
+  if (window.innerWidth > 840) {
+      // Para PCs (largura de tela acima de 840px)
+      track_prev.addEventListener('click', () => prev_slide.Slide(track_banner, 8));
+      track_next.addEventListener('click', () => next_slide.Slide(track_banner, 8));
+  } else {
+      // Para tablets/celulares (largura de tela menor ou igual a 840px)
+      track_prev.addEventListener('click', () => prev_slide.Slide(track_banner, 16));
+      track_next.addEventListener('click', () => next_slide.Slide(track_banner, 16));
+  }
+}
+
+// Chama a função ao carregar a página
+setupSlideControls();
+
+// Atualiza a função ao redimensionar a tela (para garantir que o comportamento mude se a janela for redimensionada)
+window.addEventListener('resize', () => {
+  // Remove os eventos anteriores antes de adicionar novos
+  const track_prev = document.querySelector(".track-prev");
+  const track_next = document.querySelector(".track-next");
+
+  track_prev.replaceWith(track_prev.cloneNode(true));
+  track_next.replaceWith(track_next.cloneNode(true));
+
+  // Configura os novos eventos após o redimensionamento
+  setupSlideControls();
 });
 
