@@ -91,8 +91,6 @@ function scrollFunction() {
         } else {
             element.style.display = "none";
         }
-    } else {
-        console.error("No elements found with class name 'button-arrow-up'");
     }
 }
 
@@ -101,7 +99,6 @@ function topFunction() {
     var currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
     if (currentPosition > 0) {
       window.requestAnimationFrame(topFunction);
-      console.log(currentPosition);
-      window.scrollTo(0, currentPosition - currentPosition / 12);
+      window.scrollTo(0, currentPosition - currentPosition / 7);
     }
 }

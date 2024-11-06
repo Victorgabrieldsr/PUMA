@@ -80,8 +80,7 @@
     padding: 0.5rem;
 }
 
-.track-prev,
-.track-next {
+.track-prev, .track-next {
     background: transparent;
     position: absolute;
     border: none;
@@ -95,7 +94,7 @@
 }
 
 .track-next {
-    right: 4rem;
+    right: 3rem;
 }
 
 .article-track:hover .track-prev,
@@ -114,7 +113,7 @@
 }
 
 .carousel-container {
-    position: relative;
+    position: relative; 
     margin: 0 auto;
     overflow: hidden;
     width: 85%;
@@ -170,12 +169,10 @@
     margin: 1rem 0 0 0;
     max-width: 250px;
 }
-
-.card h4 {
+.card h4{
     margin: 1rem 0 0 0;
 }
-
-.card h4 span {
+.card h4 span{
     display: inline;
 }
 
@@ -231,19 +228,18 @@ ion-icon:hover {
 
 @media screen and (max-width: 840px) {
     /* Tablet */
-
-    .titulo-banner {
-        font-size: 0.8rem;
-        margin-top: 1rem;
-    }
-
-    /* BANNER */
+    
     .banner-mobile {
         display: block;
     }
 
     .banner-desktop {
         display: none;
+    }
+
+    .titulo-banner {
+        font-size: 0.8rem;
+        margin-top: 1rem;
     }
 
     .multi-banner-desktop {
@@ -254,155 +250,133 @@ ion-icon:hover {
         display: flex;
     }
 
-    /* BANNER */
-
-    /* 7 - BANNERS */
-    .card-track {
-        flex: 0 0 calc(80%);
-        margin-bottom: 2rem;
+    .carrosel-prev ion-icon,
+    .carrosel-next ion-icon {
+        font-size: 3rem;
+    }
+    
+    .carrosel-prev {
+        left: -3rem;
     }
 
+    .carrosel-next {
+        right: -3rem;
+    }
+
+    .carousel-container {
+        width: 100%;
+    }
+    
+    .card-track {
+        flex: 0 0 calc(80%); 
+        margin-bottom: 2rem;
+    }
+    
     .card-track:not(:last-child) {
-        margin-right: -5rem;
+        margin-right: 1rem;
     }
 
     .card-track img {
-        width: 85%;
+        width: 100%;
     }
 
-    .track-prev,
-    .track-next {
+    .track-prev, .track-next {
         opacity: 1;
     }
 
-    .track-prev {
-        left: 1.5rem;
+    .track-prev{
+        left: 0.5rem;
     }
-    
-    .track-next {
-        right: 1.5rem;
+
+    .track-next{
+        right: 0.5rem;
     }
-    .track-prev ion-icon,
-    .track-next ion-icon {
-        cursor: pointer;
-        font-size: 4rem;
-        background-color: white;
-        border-radius: 3rem;
-        padding: 0.5rem;
-        margin-top: -8rem;
-    }
-    
+
     .track-banner {
-        left: -60%;
+        left: -75%;
     }
-
-    /* 7 - BANNERS */
-
-    /* CARROSEL */
-    .carrosel-prev {
-        left: -4.5rem;
-    }
-    
-    .carrosel-next {
-        right: -4.5rem;
-    }
-
-    .carrosel-prev ion-icon,
-    .carrosel-next ion-icon {
-        font-size: 5rem;
-    }
-    /* CARROSEL */
 }
 
 @media screen and (max-width: 430px) {
 
     /* Smartphone */
-    /* 7 - BANNERS */
-    .carrosel-prev {
-        left: -4.5rem;
-    }
-    
-    .carrosel-next {
-        right: -4.5rem;
-    }
-    
-    .carrosel-prev ion-icon,
-    .carrosel-next ion-icon {
-        font-size: 3.5rem;
-    }
     .carousel-container {
-        width: 120%;
-        margin-left: -2rem;
+        width: 100%;
     }
-    .carousel {
-        width: 85%;
-    }
-    
-    .card {
-        width: 65%;
-    }
-    
-    .card:not(:last-child) {
-        margin-right: -1rem;
-    }
-    
-    #content-carrosel1 .card hr,
-    #content-carrosel2 .card hr,
-    #content-carrosel3 .card hr {
-        padding: 0 40%;
-    }
-    
-    .card span {
-        width: 85%;
-    }
+}
 
-    /* 7 - BANNERS */
 
-    /* CARROSEL */
-        /* 7 - BANNERS */
-    
-        .track-prev {
-            left: 0.5rem;
-        }
-        
-        .track-next {
-            right: 0.5rem;
-        }
 
-        .track-prev ion-icon,
-        .track-next ion-icon {
-            font-size: 3rem;
-            margin-top: 2rem;
-        }
-        .card-track {
-            flex: 0 0 calc(80%); 
-            margin-bottom: 2rem;
-        }
-        
-        .card-track:not(:last-child) {
-            margin-right: 1rem;
-        }
-    
-        .card-track img {
-            width: 100%;
-        }
-    
-        .track-prev, .track-next {
-            opacity: 1;
-        }
-    
-        .track-prev{
-            left: 0.5rem;
-        }
-    
-        .track-next{
-            right: 0.5rem;
-        }
-    
-        .track-banner {
-            left: -75%;
-        }
-    
-        /* 7 - BANNERS */
-    /* CARROSEL */
+
+
+
+
+
+
+.carousel-size {
+    position: relative;
+    margin: 0 auto;
+    width: 65%;
+    margin-bottom: 4rem;
+}
+
+.carousel-container {
+    position: relative; 
+    margin: 0 auto;
+    overflow: hidden;
+    width: 85%;
+    margin-left: -4rem;
+}
+
+.carousel {
+    display: flex;
+}
+
+.card {
+    flex: 0 0 calc(25% - 1rem);
+    width: 35%;
+}
+
+.card:not(:last-child) {
+    margin-right: -1rem;
+}
+
+.card a {
+    color: black;
+    cursor: pointer;
+    font-size: 0.95rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card img {
+    height: auto;
+    width: 75%;
+}
+
+#content-carrosel1 .card hr {
+    padding: 0 40%;
+    border: 1px solid blueviolet;
+}
+
+#content-carrosel2 .card hr {
+    padding: 0 40%;
+    border: 1px solid black;
+}
+
+#content-carrosel3 .card hr {
+    padding: 0 40%;
+    border: 1px solid orange;
+}
+
+.card span {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 1rem 0 0 0;
+    max-width: 250px;
+    width: 85%;
 }

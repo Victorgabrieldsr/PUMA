@@ -65,16 +65,26 @@ class goToPrevSlide {
 }
 const next_slide = new goToNextSlide();
 const prev_slide = new goToPrevSlide();
-
-nextButton1.addEventListener('click', () => next_slide.Slide(carousel1, 16));
-prevButton1.addEventListener('click', () => prev_slide.Slide(carousel1, 16));
-
-nextButton2.addEventListener('click', () => next_slide.Slide(carousel2, 16));
-prevButton2.addEventListener('click', () => prev_slide.Slide(carousel2, 16));
-
-nextButton3.addEventListener('click', () => next_slide.Slide(carousel3, 16));
-prevButton3.addEventListener('click', () => prev_slide.Slide(carousel3, 16));
-
+if (window.innerWidth > 840) {
+  nextButton1.addEventListener('click', () => next_slide.Slide(carousel1, 16));
+  prevButton1.addEventListener('click', () => prev_slide.Slide(carousel1, 16));
+  
+  nextButton2.addEventListener('click', () => next_slide.Slide(carousel2, 16));
+  prevButton2.addEventListener('click', () => prev_slide.Slide(carousel2, 16));
+  
+  nextButton3.addEventListener('click', () => next_slide.Slide(carousel3, 16));
+  prevButton3.addEventListener('click', () => prev_slide.Slide(carousel3, 16));
+}else{
+  nextButton1.addEventListener('click', () => next_slide.Slide(carousel1, -16.5));
+  prevButton1.addEventListener('click', () => prev_slide.Slide(carousel1, -16.5));
+  
+  nextButton2.addEventListener('click', () => next_slide.Slide(carousel2, -16.5));
+  prevButton2.addEventListener('click', () => prev_slide.Slide(carousel2, -16.5));
+  
+  nextButton3.addEventListener('click', () => next_slide.Slide(carousel3, -16.5));
+  prevButton3.addEventListener('click', () => prev_slide.Slide(carousel3, -16.5));
+}
+  
 
 ///Transição de opacidade nos botoes do Carrosel
 let buttonsCarrosel = document.getElementsByTagName("ion-icon");
@@ -110,8 +120,8 @@ function setupSlideControls() {
       track_next.addEventListener('click', () => next_slide.Slide(track_banner, 8));
   } else {
       // Para tablets/celulares (largura de tela menor ou igual a 840px)
-      track_prev.addEventListener('click', () => prev_slide.Slide(track_banner, 16));
-      track_next.addEventListener('click', () => next_slide.Slide(track_banner, 16));
+      track_prev.addEventListener('click', () => prev_slide.Slide(track_banner, 14.5));
+      track_next.addEventListener('click', () => next_slide.Slide(track_banner, 14.5));
   }
 }
 

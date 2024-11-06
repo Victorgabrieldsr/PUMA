@@ -74,6 +74,8 @@ header img {
     height: 2.5rem;
     background-color: transparent;
     border: 1px solid #464646;
+    color: white;
+    padding-left: 2.5rem;
 }
 
 .caixaBusca::-webkit-input-placeholder {
@@ -82,12 +84,15 @@ header img {
 
 .caixaBusca::placeholder {
     text-transform: uppercase;
-    padding-left: 2.9rem;
 }
 
 .nav-icons img:hover {
     opacity: 0.6;
     transition: 0.17s;
+}
+
+.btn-lupa{
+    
 }
 
 .lupa {
@@ -339,7 +344,7 @@ footer a{
     }
 
     .separar-nav {
-        padding: 0.9rem;
+        padding: 1.6rem;
     }
 
     .logo img {
